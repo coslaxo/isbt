@@ -65,7 +65,7 @@ public class MainActivity extends ActionBarActivity {
     int petClickWorth = 1;
     int hps = 0;
     int mps = 0;
-
+    //updates all key variables and calls methods to display them in relevant IDs
     public void update() {
         happiness = happiness + hps;
         displayHappiness(happiness);
@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
         displayHps(hps);
         displayMps(mps);
     }
-    //updates values
+    //updates values - individual methods for displaying current variable value in IDs -- all called via update
     public void displayHappiness(int happiness) {
         TextView happinessView = (TextView) findViewById(R.id.happiness_value);
         happinessView.setText(String.valueOf(happiness));
@@ -90,17 +90,15 @@ public class MainActivity extends ActionBarActivity {
         TextView moneyView = (TextView) findViewById(R.id.money_value);
         moneyView.setText(String.valueOf(money));
     }
-    //buttons
+    //buttons for actually doing stuff!
     public void work(View view){
         money = money + happiness;
         happiness = 0;
-        update();
     }
     public void pet(View view){
         happiness = happiness + petClickWorth;
-        update();
     }
-
+    //here lie the purchasing of cats methods and their ints
     int kittenCost = 50;
     public void buyKitten(View view) {
         if (money >= kittenCost){
@@ -123,7 +121,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-
+    //below are the show/hide for the different categories -- maybe tidy up?
     public void showCatsTable(View view){
         LinearLayout cats = (LinearLayout) findViewById(R.id.cats_buys);
         LinearLayout work = (LinearLayout) findViewById(R.id.work_buys);
