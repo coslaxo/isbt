@@ -1,0 +1,425 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#4CAF50"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/happiness" />
+
+        <TextView
+            android:id="@+id/happiness_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hps_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/hps" />
+
+        <TextView
+            android:id="@+id/hps_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:onClick="pet"
+            android:text="@string/pet" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/money" />
+
+        <TextView
+            android:id="@+id/money_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cps_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/mps" />
+
+        <TextView
+            android:id="@+id/mps_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="225dp"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:onClick="work"
+            android:text="@string/work_button" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:onClick="showCatsTable"
+            android:text="@string/cats" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="showWorkTable"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:text="@string/work" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="showCatToysTable"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:text="@string/accessories" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:onClick="showHumanToys"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:text="@string/play" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#4CAF50">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/work_buys"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_margin="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TEST FOR WORK"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toys_buys"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_margin="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TEST FOR TOYS"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cats_buys"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner">
+
+                    <TextView
+                        android:id="@+id/kitten_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kitten" />
+
+                    <TextView
+                        android:id="@+id/kitten_cost_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/kitten_name"
+                        android:text="@string/kitten_start_cost"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kitten_flavour_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/kitten_name"
+                        android:layout_toRightOf="@id/kitten_name"
+                        android:text="@string/kitten_flavour"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/quantity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/kitten_cost_text"
+                        android:text="@string/quantity" />
+
+                    <TextView
+                        android:id="@+id/kitten_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/quantity_text"
+                        android:layout_toRightOf="@+id/quantity_text"
+                        android:text="@string/zero" />
+
+                    <Button
+                        android:id="@+id/sell_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="4dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="sellKitten"
+                        android:text="@string/sell" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toLeftOf="@+id/sell_button"
+                        android:layout_toStartOf="@id/sell_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="buyKitten"
+                        android:text="@string/buy" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner">
+
+                    <TextView
+                        android:id="@+id/cat_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cat" />
+
+                    <TextView
+                        android:id="@+id/cat_cost_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cat_name"
+                        android:text="@string/cat_start_cost"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cat_flavour_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cat_name"
+                        android:layout_toRightOf="@id/cat_name"
+                        android:text="@string/cat_flavour"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/cat_quantity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cat_cost_text"
+                        android:text="@string/quantity" />
+
+                    <TextView
+                        android:id="@+id/cat_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/cat_quantity_text"
+                        android:layout_toRightOf="@+id/cat_quantity_text"
+                        android:text="@string/zero" />
+
+                    <Button
+                        android:id="@+id/cat_sell_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="4dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="sellCat"
+                        android:text="@string/sell" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toLeftOf="@id/cat_sell_button"
+                        android:layout_toStartOf="@id/cat_sell_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="buyCat"
+                        android:text="@string/buy" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner">
+
+                    <TextView
+                        android:id="@+id/shorthair_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shorthair" />
+
+                    <TextView
+                        android:id="@+id/shorthair_cost_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shorthair_name"
+                        android:text="@string/shorthair_start_cost"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shorthair_flavour_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/shorthair_name"
+                        android:layout_toRightOf="@id/shorthair_name"
+                        android:text="@string/shorthair_flavour"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/shorthair_quantity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shorthair_cost_text"
+                        android:text="@string/quantity" />
+
+                    <TextView
+                        android:id="@+id/shorthair_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/shorthair_quantity_text"
+                        android:layout_toRightOf="@+id/shorthair_quantity_text"
+                        android:text="@string/zero" />
+
+                    <Button
+                        android:id="@+id/shorthair_sell_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="4dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="sellShortHair"
+                        android:text="@string/sell" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_toLeftOf="@id/shorthair_sell_button"
+                        android:layout_toStartOf="@id/shorthair_sell_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="buyShortHair"
+                        android:text="@string/buy" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/human_buys"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_margin="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TEST FOR HUMANS"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
