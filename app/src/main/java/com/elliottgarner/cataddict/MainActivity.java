@@ -66,12 +66,17 @@ public class MainActivity extends ActionBarActivity {
     int hps = 0;
     int mps = 0;
     //updates all key variables and calls methods to display them in relevant IDs
-    public void update() {
+
+
+    public void updateDisplay(){
         happiness = happiness + hps;
         displayHappiness(happiness);
         displayMoney(money);
+    }
+    public void update() {
         displayHps(hps);
         displayMps(mps);
+        updateDisplay();
     }
     //updates values - individual methods for displaying current variable value in IDs -- all called via update
     public void displayHappiness(int happiness) {
@@ -90,13 +95,17 @@ public class MainActivity extends ActionBarActivity {
         TextView moneyView = (TextView) findViewById(R.id.money_value);
         moneyView.setText(String.valueOf(money));
     }
+
     //buttons for actually doing stuff!
     public void work(View view){
         money = money + happiness;
         happiness = 0;
+        updateDisplay();
     }
     public void pet(View view){
         happiness = happiness + petClickWorth;
+        updateDisplay();
+
     }
     //here lie the purchasing of cats methods and their ints
     int kittenCost = 50;
