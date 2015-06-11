@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                update();
+                                hpsTick();
                             }
                         });
                     }
@@ -69,13 +69,13 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void updateDisplay(){
-        happiness = happiness + hps;
+        displayHps(hps);
+        displayMps(mps);
         displayHappiness(happiness);
         displayMoney(money);
     }
-    public void update() {
-        displayHps(hps);
-        displayMps(mps);
+    public void hpsTick() {
+        happiness = happiness + hps;
         updateDisplay();
     }
     //updates values - individual methods for displaying current variable value in IDs -- all called via update
